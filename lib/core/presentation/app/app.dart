@@ -37,6 +37,7 @@ class App extends StatelessWidget {
     final User? user = autProvider.value;
 
     return MaterialApp(
+      theme: ThemeData.dark(useMaterial3: true),
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorProvider.navigatorKey,
       home: user == null ? AutView.create() : LoadDataView(user: user),
