@@ -30,7 +30,7 @@ class _LoadDataViewState extends State<LoadDataView> {
     await Future.delayed(const Duration(seconds: 1));
 
     final DataContext dataContext = DataContext(
-      documents: List.generate(100, (int i) => Document()),
+      documents: List.generate(100, (int i) => Document(uid: '${i + 1}')),
       products: List.generate(100, (int i) => Product(uid: '${i + 1}', l: 0)),
     );
 
