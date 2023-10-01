@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 class ImportantMessagesProvider with ChangeNotifier {
   final BuildContext context;
 
-  late final Size size = MediaQuery.of(context).size;
-
   final Size sizeButton = const Size(100, 100);
 
   late Offset _offset = Offset(size.width / 2 - sizeButton.width / 2, size.height - sizeButton.height);
@@ -13,6 +11,8 @@ class ImportantMessagesProvider with ChangeNotifier {
   ImportantMessagesProvider({
     required this.context,
   });
+
+  Size get size => MediaQuery.of(context).size;
 
   Offset get offset => _offset;
 
