@@ -63,6 +63,7 @@ class ShowDocumentDelegate extends SearchDelegate<void> {
         return Card(
           child: ListTile(
             title: Text('Document №${document.uid}'),
+            onTap: documentsProvider.myyyy,
           ),
         );
       },

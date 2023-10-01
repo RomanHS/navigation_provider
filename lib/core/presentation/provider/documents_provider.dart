@@ -13,4 +13,8 @@ class DocumentsProvider with ChangeNotifier {
   });
 
   List<Document> get documents => dataContext.documents;
+
+  void myyyy() {
+    notifyListeners();
+  }
 }
