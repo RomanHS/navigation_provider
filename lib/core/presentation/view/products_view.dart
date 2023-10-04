@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_88/core/domain/catalogs/product.dart';
 import 'package:flutter_application_88/core/presentation/app/state_notifier.dart';
+import 'package:flutter_application_88/core/presentation/page/product_page.dart';
 import 'package:flutter_application_88/core/presentation/provider/products_provider.dart';
 import 'package:flutter_application_88/core/presentation/widget/important_messages_widget.dart';
 import 'package:flutter_application_88/core/presentation/widget_model/product_widget_model.dart';
@@ -35,6 +36,10 @@ class ProductsView extends StatelessWidget {
                   title: Text('Product №${product.uid}'),
                   subtitle: Text(product.l.toString()),
                   onTap: productWidgetModel.click,
+                  trailing: IconButton(
+                    onPressed: () => Navigator.push(context, ProductPage(product: product).createRoute(context)),
+                    icon: const Icon(Icons.abc),
+                  ),
                 ),
               );
             },
